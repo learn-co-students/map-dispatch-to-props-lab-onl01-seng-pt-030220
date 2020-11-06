@@ -24,9 +24,7 @@ export class RestaurantInput extends Component {
   handleOnSubmit = event => {
     event.preventDefault();
     // add missing code
-  
-    // this.props.addRestaurant(),
-     this.props.dispatch({type:'ADD_RESTAURANT',restaurant: this.state})
+     this.props.dispatch(addRestaurant(this.state))
   }
 
   render() {
