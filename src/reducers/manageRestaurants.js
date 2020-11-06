@@ -1,9 +1,12 @@
 export default function manageRestaurants(state = {
   restaurants: []
 }, action) {
+
   switch (action.type) {
 
     case 'ADD_RESTAURANT':
+           console.log(`action`,action.restaurant)
+
       return {
         ...state,
         restaurants: [...state.restaurants, action.restaurant]
@@ -12,5 +15,7 @@ export default function manageRestaurants(state = {
     default:
       return state;
 
+
   }
+
 };
